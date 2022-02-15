@@ -158,7 +158,7 @@ public class GUIAdmin extends JFrame implements ActionListener,MouseListener{
 		try {
 			vTitle.clear();
 			vData.clear();
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlydanhsachnhac","root","andubadao123");
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery("select * from danhsach order by TENBAIHAT asc");
@@ -236,7 +236,7 @@ public class GUIAdmin extends JFrame implements ActionListener,MouseListener{
 			try {
 				vData.clear();
 				
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				Connection conn =  DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlydanhsachnhac","root","andubadao123");
 				Statement st = conn.createStatement();
 				ResultSet rs = st.executeQuery(luachon());
