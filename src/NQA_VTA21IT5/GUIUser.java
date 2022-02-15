@@ -53,6 +53,8 @@ public class GUIUser extends JFrame implements ActionListener{
 	String[] chosse = {"Tên bài hát","Tên ca sĩ"};
 	private final JComboBox comboBox = new JComboBox(chosse);
 	String sql = "";
+	
+	private final JComboBox clrs = new JComboBox();
 
 	public GUIUser() {
 		textField.setColumns(12);
@@ -62,6 +64,10 @@ public class GUIUser extends JFrame implements ActionListener{
 		URL urlIconNotepad = GUIAdmin.class.getResource("logo.png");
 		Image img = Toolkit.getDefaultToolkit().createImage(urlIconNotepad);
 		setIconImage(img);
+		
+		clrs.addItem("Kiểu 1");
+		clrs.addItem("Kiểu 2");
+		clrs.addItem("Kiểu 3");
 		
 		getContentPane().setLayout(new BorderLayout());
 		pan1.setBackground(new Color(245, 222, 179));
@@ -117,6 +123,10 @@ public class GUIUser extends JFrame implements ActionListener{
 		getContentPane().add(pan3,BorderLayout.SOUTH);
 		pan3.setLayout(new FlowLayout(FlowLayout.RIGHT,10,10));
 		pan3.setBackground(new Color(245, 222, 179));
+		
+		clrs.setFont(new Font("Tahoma", Font.ITALIC, 10));
+		clrs.setBackground(new Color(210, 180, 140));
+		pan3.add(clrs);
 		comboBox.setFont(new Font("Tahoma", Font.ITALIC, 10));
 		comboBox.setBackground(new Color(210, 180, 140));
 		
@@ -134,6 +144,7 @@ public class GUIUser extends JFrame implements ActionListener{
 		about.addActionListener(this);
 		thoat.addActionListener(this);
 		tongso.addActionListener(this);
+		clrs.addItemListener(this);
 		
 		
 		
@@ -208,7 +219,27 @@ public class GUIUser extends JFrame implements ActionListener{
 			}
 		}
 	}
+	
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		int index = clrs.getSelectedIndex();
+		
+		if (index == 0) {
+			pan1.setBackground(new Color(245,222,179));
+			pan3.setBackground(new Color(245,222,179));
+			
+		}else if (index == 1) {
+			pan1.setBackground(new Color(76,181,245));
+			pan3.setBackground(new Color(76,181,245));
+		}else if (index == 2) {
+			pan1.setBackground(Color.pink);
+			pan3.setBackground(Color.pink);
+		}
+		
+		
+	}
 
+	
 	
 	
 	@Override
