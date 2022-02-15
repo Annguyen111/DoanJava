@@ -148,7 +148,7 @@ public class Sua extends JFrame implements ActionListener{
 						",THELOAI = \"" + theloai + "\",LOIBAIHAT = \"" + loibh + 
 						"\" where MABAIHAT = \"" + mabaihat + "\"";
 				
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlydanhsachnhac","root","andubadao123");
 				Statement ts = co.createStatement();
 				ts.executeUpdate(sql);
