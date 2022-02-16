@@ -150,7 +150,7 @@ public class GUIUser extends JFrame implements ActionListener{
 		
 		
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setVisible(true);
 	}
 	
