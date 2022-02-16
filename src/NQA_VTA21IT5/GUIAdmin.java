@@ -35,7 +35,7 @@ public class GUIAdmin extends JFrame implements ActionListener,MouseListener{
 	private JButton sua = new JButton("SỬA");
 	private JButton xoa = new JButton("XÓA");
 	private JButton thoat = new JButton("THOÁT");
-	private JButton about = new JButton("ABOUT");
+	private JButton about = new JButton("LIÊN HỆ");
 	
 	private JLabel karaoke = new JLabel("KARAOKE LIST");
 	
@@ -53,7 +53,7 @@ public class GUIAdmin extends JFrame implements ActionListener,MouseListener{
 	String[] chosse = {"Tên bài hát","Tên ca sĩ"};
 	private final JComboBox comboBox = new JComboBox(chosse);
 	String sql = "";
-	private final JButton hienthi = new JButton("HIỂN THỊ");
+	private final JButton hienthi = new JButton("LÀM MỚI");
 
 	public GUIAdmin() {
 		textField.setColumns(12);
@@ -268,7 +268,7 @@ public class GUIAdmin extends JFrame implements ActionListener,MouseListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String check = e.getActionCommand();
-		if (check == "ABOUT") {
+		if (check == "LIÊN HỆ") {
 			JFrame dia = new JFrame();
 			JOptionPane.showMessageDialog(dia, "Nguyễn Quốc An\n Vũ Thái An\n Lớp 21IT5","Thông tin",JOptionPane.INFORMATION_MESSAGE);
 		}else if (check == "THÊM"){
@@ -293,7 +293,7 @@ public class GUIAdmin extends JFrame implements ActionListener,MouseListener{
 			    		  (String)st.elementAt(2),(String)st.elementAt(3),(String)st.elementAt(5));
 			      load();
 			 }
-		}else if (check == "HIỂN THỊ") {
+		}else if (check == "LÀM MỚI") {
 			load();
 			dModel.fireTableDataChanged();
 		}
