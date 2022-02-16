@@ -150,7 +150,7 @@ public class GUIAdmin extends JFrame implements ActionListener,MouseListener{
 		
 		
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setVisible(true);
 	}
 	
