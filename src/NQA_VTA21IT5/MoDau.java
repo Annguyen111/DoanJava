@@ -106,10 +106,8 @@ public class MoDau extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		String truy = e.getActionCommand();
 		if (truy == "ADMIN") {
-			setVisible(false);
 			Login lo = new Login();
 		}else if (truy == "USER") {
-			setVisible(false);
 			GUIUser gdu = new GUIUser();
 		}else if (truy == "CANCEL") {
 			System.exit(0);
