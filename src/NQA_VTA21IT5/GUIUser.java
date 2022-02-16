@@ -31,7 +31,7 @@ public class GUIUser extends JFrame implements ActionListener{
 
 	private JButton timkiem = new JButton("TÌM KIẾM");
 	private JButton thoat = new JButton("THOÁT");
-	private JButton about = new JButton("ABOUT");
+	private JButton about = new JButton("LIÊN HỆ");
 	private JButton tongso = new JButton("TỔNG SỐ"); 
 	
 	private JLabel karaoke = new JLabel("KARAOKE LIST");
@@ -245,7 +245,7 @@ public class GUIUser extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String check = e.getActionCommand();
-		if (check == "ABOUT") {
+		if (check == "LIÊN HỆ") {
 			JFrame dia = new JFrame();
 			JOptionPane.showMessageDialog(dia, "Nguyễn Quốc An\n Vũ Thái An\n Lớp 21IT5","Thông tin",JOptionPane.INFORMATION_MESSAGE);
 		}else if(check == "TÌM KIẾM") {
